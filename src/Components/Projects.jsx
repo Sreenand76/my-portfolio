@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
          
         </div>
         <div>
-          <div className='flex flex-col gap-3 p-1'>
+          <div className='flex flex-col gap-3 p-2'>
             <div className=' text-xl font-semibold flex gap-5 items-center'>
               {project.title}
               <a href={project.github_link}><BsGithub /></a>
