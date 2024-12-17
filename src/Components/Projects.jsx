@@ -63,17 +63,17 @@ const ProjectCard = ({ project }) => {
             />
           </a>
           
-          <motion.div
-            className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300 rounded-lg backdrop-blur-sm`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileHover={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <span>Visit Site</span>
-              <FaPaperPlane/>
-            </a>
-          </motion.div>
+         <motion.div
+       className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300 rounded-lg backdrop-blur-sm`}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileHover={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+       >
+      <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+       <span>Visit Site</span>
+        <FaPaperPlane />
+        </a>
+        </motion.div>
          
         </div>
         <div>
