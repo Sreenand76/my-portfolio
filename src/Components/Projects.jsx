@@ -15,7 +15,7 @@ const projectsData = [
   {
     image: '/img/quizmo-app2.png',
     title: 'Quizmo',
-    description: 'A fun and interactive quiz app that offers various quizzes to test your knowledge in different topics of fundamental computer science, with a user-friendly interface.',
+    description: 'A fun and interactive quiz app that offers various quizzes to test your knowledge on fundamental computer science topics, featuring a user-friendly interface.',
     technologies: ["React", "SpringBoot", "SQL", "Tailwind", "Docker"],
     live_link: 'https://quizmo75.vercel.app/',
     github_link: 'https://github.com/Sreenand76/QuizApp'
