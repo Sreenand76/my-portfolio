@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { BsGithub } from 'react-icons/bs'
 import { FaPaperPlane } from 'react-icons/fa'
@@ -44,16 +44,11 @@ const ScrollReveal = ({ children }) => {
 
 const ProjectCard = ({ project }) => {
   
-  const [isHovered, setIsHovered] = useState(false);
 
-  const handleClick = () => {
-    setIsHovered(!isHovered);  // Toggle hover effect on touch
-  };
-  
   return (
     <ScrollReveal>
       <div className='flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-lg lg:min-w-[80vw]'>
-        <div className="relative w-full lg:w-[38vw] h-[25vh] md:h-[43vh]" onClick={handleClick}>
+        <div className="relative w-full lg:w-[38vw] h-[25vh] md:h-[43vh]">
           {/* Image */}
           <a href={project.live_link} target="_blank" rel="noopener noreferrer">
             <img
@@ -63,17 +58,19 @@ const ProjectCard = ({ project }) => {
             />
           </a>
           
-         <motion.div
-       className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300 rounded-lg backdrop-blur-sm`}
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileHover={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
-       >
-      <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-       <span>Visit Site</span>
-        <FaPaperPlane />
-        </a>
-        </motion.div>
+        <div className='hidden md:block'>
+            <motion.div
+              className={` absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 $ transition-opacity duration-300 rounded-lg backdrop-blur-sm `}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileHover={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <span>Visit Site</span>
+                <FaPaperPlane />
+              </a>
+            </motion.div>
+          </div>
          
         </div>
         <div>
