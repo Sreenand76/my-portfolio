@@ -6,29 +6,30 @@ import { FaPaperPlane } from 'react-icons/fa'
 const projectsData = [
   {
     image: '/img/Portfolio-laptop2.png',
-    title: 'Ai Article Summarizer',
-    description: 'An Ai article summarizer which works with OpenAi to summarize long articles',
-    technologies: ["React","SpringBoot","SQL","Tailwind","Docker"],
+    title: 'PrismTech',
+    description: 'A laptop buying platform with advanced filters,searching and dynamic pricing system allowing users to compare and purchase laptops based on specifications and prices.',
+    technologies: ["React", "SpringBoot", "SQL", "Tailwind", "Docker"],
     live_link: 'https://prismtech7-laptops.vercel.app/',
     github_link: 'https://github.com/Sreenand76/Ecommerce-laptop'
   },
   {
     image: '/img/quizmo-app2.png',
-    title: 'Responsive Pricing Page',
-    description: 'An Ai article summarizer which works with OpenAi to summarize long articles',
-    technologies: ["React","SpringBoot","SQL","Tailwind","Docker"],
+    title: 'Quizmo',
+    description: 'A fun and interactive quiz app that offers various quizzes to test your knowledge in different topics of fundamental computer science, with a user-friendly interface.',
+    technologies: ["React", "SpringBoot", "SQL", "Tailwind", "Docker"],
     live_link: 'https://quizmo75.vercel.app/',
-    github_link: 'https://github.com/Sreenand76/pricing-page-1'
+    github_link: 'https://github.com/Sreenand76/QuizApp'
   },
   {
     image: '/img/articlesummarizer2.png',
-    title: 'Contact App',
-    description: 'An Ai article summarizer which works with OpenAi to summarize long articles',
+    title: 'ConciseAI',
+    description: 'An AI-powered article summarizer that uses OpenAI to extract the key points from long articles and present them in a concise format.',
     technologies: ["React", "OpenAI"],
     live_link: 'https://ai-summarizer-seven-steel.vercel.app/',
-    github_link: 'https://github.com/Sreenand76/contactApp'
+    github_link: 'https://github.com/Sreenand76/ai-summarizer'
   },
 ]
+
 const ScrollReveal = ({ children }) => {
   return (
     <motion.div
