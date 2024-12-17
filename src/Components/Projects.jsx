@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { BsGithub } from 'react-icons/bs'
 import { FaPaperPlane } from 'react-icons/fa'
@@ -64,7 +64,7 @@ const ProjectCard = ({ project }) => {
           </a>
           
           <motion.div
-            className=`absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300 rounded-lg backdrop-blur-sm`
+            className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-xl opacity-0 hover:opacity-100 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300 rounded-lg backdrop-blur-sm`}
             initial={{ opacity: 0, scale: 0.8 }}
             whileHover={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
