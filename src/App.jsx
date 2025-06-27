@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar"
 import Tech from "./Components/Tech"
 import Projects from "./Components/Projects"
 import ContactForm from "./Components/ContactForm"
+import Experience from "./Components/Experience"
 
 
 function App() {
@@ -14,8 +15,10 @@ function App() {
      <main className="flex flex-col items-center justify-center px-4 md:px-8 lg:px-10">
         <NavBar/>
         <Hero/>
+        <Experience/>
         <Tech/>
         <Projects/>
+        <hr className="my-8 w-[83vw] border-t-2 border-[#63e] opacity-50" />
         <ContactForm/>
      </main>
     </>

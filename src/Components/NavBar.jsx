@@ -14,6 +14,9 @@ const[isOpen,setIsOpen]=useState(false);
            <a href='#home' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
             <li>Home</li>
            </a>
+           <a href='#experience' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
+            <li>Experience</li>
+           </a>
            <a href='#tech' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
             <li>Tech</li>
            </a>
@@ -40,10 +43,13 @@ const[isOpen,setIsOpen]=useState(false);
       <HiMenu className='block md:hidden text-4xl' onClick={menuOpen} size={24} />
     )}
     {isOpen && (
-      <div className={`fixed right-0 top-[84px] flex h-[46vh] w-1/2 flex-col items-start justify-start gap-10 border-gray bg-black/70 p-12 ${isOpen ? "block" :"hidden"}`}>
+      <div className={`fixed right-0 top-[84px] flex h-[55vh] w-1/2 flex-col items-start justify-start gap-10 border-gray bg-black/70 p-12 ${isOpen ? "block" :"hidden"}`}>
          <ul className='flex flex-col gap-8'>
            <a href='#home' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
             <li>Home</li>
+           </a>
+           <a href='#experience' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
+            <li>Experience</li>
            </a>
            <a href='#tech' className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
             <li>Tech</li>

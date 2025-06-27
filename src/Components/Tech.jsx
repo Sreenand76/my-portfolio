@@ -15,7 +15,8 @@ const skills = [
 const Tech = () => {
   return (
     <>
-    <div id='tech' className='flex flex-col w-full md:w-[80vw]'>
+    <section id='tech' className='flex flex-col w-full md:w-[75vw] ' // Add scroll-mt-20 here
+      style={{ scrollMarginTop: '7rem' }}>
     <h2 className='text-gray-200 flex text-3xl lg:text-5xl mb-5 justify-left ml-2 md:justify-center'>Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 gap-x-6 p-2 md:gap-5 lg:gap-10 lg:p-4 justify-center">
         {skills.map(skill => (
@@ -36,7 +37,7 @@ const Tech = () => {
           </motion.div>
         ))}
       </div>
-      </div>
+      </section>
     </>
   );
 };

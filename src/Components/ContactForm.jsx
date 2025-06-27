@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { BsGithub, BsLinkedin, BsMailbox, BsMailbox2Flag, BsMessenger } from "react-icons/bs";
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,57 +17,57 @@ const ContactForm = () => {
       message: message,
     };
 
-    axios.post('https://api.emailjs.com/api/v1.0/email/send', {
-      service_id: 'YOUR_SERVICE_ID',
-      template_id: 'YOUR_TEMPLATE_ID',
-      user_id: 'YOUR_USER_ID',
-      template_params: templateParams,
-    })
-    .then(() => {
-      setSuccess(true);
-      setName('');
-      setEmail('');
-      setMessage('');
-    })
-    .catch((err) => {
-      setError('Failed to send message. Please try again.');
-      console.error(err);
-    });
+    axios
+      .post("https://api.emailjs.com/api/v1.0/email/send", {
+        service_id: "YOUR_SERVICE_ID",
+        template_id: "YOUR_TEMPLATE_ID",
+        user_id: "YOUR_USER_ID",
+        template_params: templateParams,
+      })
+      .then(() => {
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        toast.success(`Login successfull`);
+        console.error(err);
+      });
   };
 
   return (
-    <div className='w-full lg:w-3/5 mx-auto p-2'>
-      <h2 className='text-3xl mb-5 text-gray-200 mt-10'>Contact:</h2>
-      <form onSubmit={sendEmail} className='flex flex-col w-full md:w-[400px] lg:w-[55vw] justify-left gap-3'>
-        <input
-          type='text'
-          placeholder='Your Name'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className='mb-2 p-2 border text-white font-extralight border-gray-300 rounded bg-transparent'
-          required
-        />
-        <input
-          type='email'
-          placeholder='Your Email'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className='mb-2 p-2 border text-white font-extralight border-gray-300 rounded bg-transparent'
-          required
-        />
-        <textarea
-          placeholder='Your Message'
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className='mb-2 p-2 border text-white font-extralight border-gray-300 rounded bg-transparent'
-          required
-        />
-        <button type='submit' className='bg-purple-950 text-white p-2 rounded hover:brightness-110'>
-          Submit
-        </button>
-      </form>
-      {success && <p className='mt-4 text-green-500'>Message sent successfully!</p>}
-      {error && <p className='mt-4 text-red-500'>{error}</p>}
+    <div id="contact" className="text-center pt-5 pb-10 text-white max-w-[100vw]">
+      <h2 className="text-4xl md:text-5xl mb-7 ">Stay Connected</h2>
+      <p className="text-base sm:text-lg mb-7 text-gray-300">
+        Feel free to reach out via email or connect with me on social media!
+      </p>
+      <div className="flex flex-wrap justify-center gap-4 px-7 md:px-0">
+        <a
+          href="mailto:sreenands93@gmail.com"
+          className="flex items-center gap-2 text-white border border-gray-400 px-3 sm:px-4 py-2 rounded  transition duration-300 w-full sm:w-auto justify-center"
+        >
+         <BsMessenger/>
+          Email Me
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sreenand-s-9b2716292/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2  text-white border border-gray-400 px-3 sm:px-4 py-2 rounded  transition duration-300 w-full sm:w-auto justify-center"
+        >
+          <BsLinkedin/>
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/sreenand76"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-white px-3 border border-gray-400 sm:px-4 py-2 rounded  transition duration-300 w-full sm:w-auto justify-center"
+        >
+          <BsGithub/>
+          GitHub
+        </a>
+      </div>
     </div>
   );
 };

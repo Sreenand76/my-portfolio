@@ -33,15 +33,21 @@ const Hero = () => {
             />
           </div>
           <div className="hidden md:block ">
-              {/* Laptop View */}
-              <TypeWriterEffect
+            {/* Laptop View */}
+            <TypeWriterEffect
               className="break-words whitespace-normal flex flex-wrap mt-3 md:mt-6"
               words={[{ text: "Currently debugging my way through college, one mysterious error at a time..." }]}
               cursorClassName=""
             />
-            </div>
+          </div>
           <div className='flex justify-start mt-14'>
-            <button className='bg-purple-950 text-white text-sm md:text-base p-2 rounded-md lg:h-14 px-3 font-light hover:brightness-110'>Download Resume</button>
+            <a
+              href="/Sreenand-S_Resume1.pdf" // Path to the resume file in the public directory
+              download="Sreenand_S_Resume.pdf" // The name the file will be saved as
+              className='bg-purple-950 text-white py-2 px-3 md:py-3 md:px-5 text-sm md:text-base hover:bg-purple-800 '
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
