@@ -8,7 +8,7 @@ const projectsData = [
     title: 'PrismTech',
     description: 'A laptop buying platform with advanced filters,searching and dynamic pricing system allowing users to compare and purchase laptops based on specifications and prices.',
     technologies: ["React", "SpringBoot", "SQL", "Tailwind", "Docker"],
-    live_link: 'https://prismtech7-laptops.vercel.app/',
+    live_link: 'https://geargrid-gaming-laptops.vercel.app/',
     github_link: 'https://github.com/Sreenand76/Ecommerce-laptop'
   },
   {
