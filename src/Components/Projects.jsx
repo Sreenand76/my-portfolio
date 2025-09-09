@@ -5,7 +5,7 @@ import { FaPaperPlane } from 'react-icons/fa'
 const projectsData = [
   {
     image: '/img/Portfolio-laptop2.png',
-    title: 'PrismTech',
+    title: 'GearGrid',
     description: 'A laptop buying platform with advanced filters,searching and dynamic pricing system allowing users to compare and purchase laptops based on specifications and prices.',
     technologies: ["React", "SpringBoot", "SQL", "Tailwind", "Docker"],
     live_link: 'https://geargrid-gaming-laptops.vercel.app/',
